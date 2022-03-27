@@ -1,0 +1,31 @@
+mutation {
+  createVehicle(type: "car", modelCode: "XYZ0192", brandName: "XYZ", launchDate: "2016-08-16")
+  {
+    id
+  }
+}
+
+
+mutation {
+  createPerson(name:"Federico")
+}
+
+query {
+  getPerson(id:1){
+    name
+  }
+}
+
+
+query {
+   recentPosts(offset: 1, count:1) {
+     id
+   }
+}
+
+
+mutation {
+  writePost(title:"First post", text:"blabla", category:"CategoryOne", authorId:1) {
+    id
+  }
+}
